@@ -1,0 +1,16 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Your own movie and TV streaming site: upload from your laptop, watch on your phone, and pick up where you left off.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.15"
+  },
+  "license": "MIT"
+}

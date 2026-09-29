@@ -1,0 +1,18 @@
+services:
+  movies:
+    build: .
+    container_name: movies
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    # The folders below must be writable by this user (run `id -u` / `id -g` to find yours).
+    user: "1000:1000"
+    environment:
+      # The address your phone should open, e.g. this computer's Wi-Fi IP:
+      # PUBLIC_URL: http://192.168.1.50:8080
+      # Optional: set the password here instead of on first visit.
+      # MOVIES_PASSWORD: change-me
+      TZ: UTC
+    volumes:
+      - ./media:/media   # your movies/ and tv/ folders
+      - ./data:/data     # progress, thumbnails, subtitles
